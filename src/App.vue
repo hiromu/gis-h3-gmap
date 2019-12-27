@@ -201,7 +201,7 @@ export default {
   methods: {
     onSubmit() {
       const region = this.resolution == 8? this.subregion: this.region;
-      const url = location.href + '/data/' + this.region + '/' + this.stats + '_' + this.resolution + '.kml';
+      const url = location.href + '/data/' + region + '/' + this.stats + '_' + this.resolution + '.kml';
 
       // For development:
       // const url = 'http://yumetaro.info/misc/map/' + '/data/' + region + '/' + this.stats + '_' + this.resolution + '.kml';
