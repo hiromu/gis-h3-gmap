@@ -158,7 +158,7 @@
 
 <script>
 import { h3ToChildren } from 'h3-js';
-import { gmapApi } from 'vue2-google-maps'
+import { gmapApi } from 'vue2-google-maps';
 
 const csv = require('csv-parser');
 
@@ -201,11 +201,11 @@ export default {
   methods: {
     onSubmit() {
       const region = this.resolution == 8? this.subregion: this.region;
-      const url = location.href + '/data/' + region + '/' + this.stats + '_' + this.resolution + '.kml';
 
       // For development:
-      // const url = 'http://yumetaro.info/misc/map/' + '/data/' + region + '/' + this.stats + '_' + this.resolution + '.kml';
-      console.log(url);
+      let url = location.href + '/data/' + region + '/' + this.stats + '_' + this.resolution + '.kml';
+      if (process.env.NODE_ENV == 'development')
+          url = 'https://hiromu.github.io/gis-h3-gmap/' + '/data/' + region + '/' + this.stats + '_' + this.resolution + '.kml';
 
       this.$refs.gmap.$mapPromise.then((map) => {
         if (this.kml !== null)
