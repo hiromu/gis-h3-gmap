@@ -15,6 +15,7 @@
     "h3-js": "^3.6.3",
     "iconv-lite": "^0.5.0",
     "polygon-centroid": "^1.1.0",
+    "stream-browserify": "^3.0.0",
     "tokml": "^0.4.0",
     "vue": "^2.6.10",
     "vue2-google-maps": "^0.10.7",
